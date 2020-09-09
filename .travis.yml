@@ -1,0 +1,9 @@
+language: dart
+
+before_install:
+  - echo "null"
+
+matrix:
+  include:
+  - os: linux
+    arch: amd64
