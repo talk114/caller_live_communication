@@ -1,2 +1,3 @@
 # Janus Gateway
-*janus-gateway/ @meetecho
+*server/janus-gateway/ @meetecho
+*server/coturn/ @conturn

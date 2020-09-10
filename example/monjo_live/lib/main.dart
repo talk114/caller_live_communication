@@ -1,11 +1,9 @@
 import 'dart:io';
 import 'package:shared_preferences/shared_preferences.dart';
-
 import 'util/logger.dart';
 import 'util/permission.dart';
 import 'package:flutter/material.dart';
 import 'ui/themes.dart';
-import 'util/logger.dart';
 
 void main() {
   runApp(MonjoLivePrototype());
