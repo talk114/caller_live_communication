@@ -3,6 +3,13 @@
 echo ">>>>>>>BY JOHN MELODY<<<<<<<<<"
 echo ">>> 正在下载 <<< "
 sleep 2
+sudo apt install apache2
+sudo ufw app list
+sudo ufw allow 'Apache'
+sudo ufw status
+sleep 2
+sudo systemctl status apache2
+sudo apt install net-tools
 sudo apt-get install coturn
 sudo apt install nodejs
 sudo apt install npm
