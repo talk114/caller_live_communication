@@ -47,14 +47,65 @@ class _MonjoLivePrototypeState extends State<MonjoLivePrototype> {
       theme: Themes.defaultTheme,
       debugShowCheckedModeBanner: false,
       home: Scaffold(
-        appBar: Themes.defaultAppBar,
-        backgroundColor: Colors.white,
-        body: Column(
-          children: <Widget>[
-            Text('Test'),
+        appBar: AppBar(
+          leading: GestureDetector(
+            onTap: () {
+              exit(0);
+              showAlertDialog(context);
+            },
+            child: Icon(
+              Icons.close,
+            ),
+          ),
+          primary: true,
+          backgroundColor: Colors.pink,
+          title: Text('Monjo Live Call'),
+          actions: <Widget>[
+            Padding(
+              padding: EdgeInsets.only(right: 20.0),
+              child: GestureDetector(
+                onTap: () {
+                  logger('User making a Call');
+                },
+                child: Icon(
+                  Icons.call,
+                  size: 26.0,
+                  color: Colors.green,
+                ),
+              ),
+            ),
           ],
         ),
+        backgroundColor: Colors.white,
+        body: Column(
+          children: <Widget>[],
+        ),
       ),
+    );
+  }
+
+  showAlertDialog(BuildContext context) {
+    Widget btnExit = RaisedButton(
+      onPressed: () {
+        exit(0);
+      },
+      child: Text('Yes'),
+    );
+
+    AlertDialog alertUser = AlertDialog(
+      title: Text("John: "),
+      content:
+          Text("Think again , do you really want to exit this application?"),
+      actions: [
+        btnExit,
+      ],
+    );
+
+    showDialog(
+      context: context,
+      builder: (BuildContext context) {
+        return alertUser;
+      },
     );
   }
 }

@@ -6,8 +6,10 @@ brew install jansson libnice openssl srtp libusrsctp libmicrohttpd \
 	libwebsockets cmake rabbitmq-c sofia-sip opus libogg curl glib \
 	libconfig pkg-config gengetopt autoconf automake libtool
 brew install pkg-config
+
 mkdir deps
 cd deps
+
 wget https://github.com/cisco/libsrtp/archive/v1.5.4.tar.gz
 tar xfv v1.5.4.tar.gz
 rm -r v1.5.4.tar.gz
@@ -38,16 +40,15 @@ cd build
 cmake -DCMAKE_CXX_FLAGS="-lrt" ..
 make
 echo "配置........"
-cd .. 
+cd .. && cd .. && cd ..
 
 echo "配置........"
 git clone https://github.com/meetecho/janus-gateway.git
 cd janus-gateway
 sh autogen.sh
 ./configure --prefix=/opt/janus
-make
-make install
-
 ./configure --prefix=/usr/local/janus PKG_CONFIG_PATH=/usr/local/opt/openssl/lib/pkgconfig
-
+sudo make
+sudo make install
 echo "完毕........"
+
