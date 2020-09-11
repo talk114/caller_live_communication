@@ -115,7 +115,7 @@ class _MonjoLivePrototypeState extends State<MonjoLivePrototype> {
     );
   }
 
-  _userMakingCall<T>(BuildContext context, Widget widget) {
+  userMakingCall<T>({BuildContext context, Widget widget}) {
     showDialog<T>(
       context: context,
       builder: (BuildContext context) {
@@ -143,5 +143,35 @@ class _MonjoLivePrototypeState extends State<MonjoLivePrototype> {
         }
       },
     );
+  }
+
+  _showAddressDialog(context) {
+    userMakingCall<DialogueAction>(
+        context: context,
+        widget: AlertDialog(
+            title: const Text('Enter  your custom server address:'),
+            content: TextField(
+              onChanged: (String text) {
+                setState(() {
+                  _server = text;
+                });
+              },
+              decoration: InputDecoration(
+                hintText: _server,
+              ),
+              textAlign: TextAlign.center,
+            ),
+            actions: <Widget>[
+              FlatButton(
+                  child: const Text('CANCEL'),
+                  onPressed: () {
+                    Navigator.pop(context, DialogueAction.cancel);
+                  }),
+              FlatButton(
+                  child: const Text('CONNECT'),
+                  onPressed: () {
+                    Navigator.pop(context, DialogueAction.connect);
+                  })
+            ]));
   }
 }
