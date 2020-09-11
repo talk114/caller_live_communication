@@ -1,13 +1,16 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_webrtc/webrtc.dart';
 import 'package:monjo_live/ui/themes.dart';
 import 'package:monjo_live/network/signalling.dart';
 import 'package:monjo_live/util/logger.dart';
+import 'package:monjo_live/util/permission.dart';
 
 void main() {
   // TODO change This John
-  runApp(CallerWidget(ipAddress: 'demo.cloudwebrtc.com'));
+  runApp(CallerWidget(ipAddress: '10.0.2.15'));
 }
 
 // ignore: must_be_immutable
@@ -35,6 +38,13 @@ class _CallerWidgetState extends State<CallerWidget> {
   initState() {
     super.initState();
 
+    // / Request Permission
+    if (Platform.isAndroid) {
+      AndroidOperatingSystemPermission();
+    } else if (Platform.isIOS) {
+      IOSOperatingSystemPermission();
+    }
+
     // report to console
     logger('Caller Started');
 
@@ -54,6 +64,16 @@ class _CallerWidgetState extends State<CallerWidget> {
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         appBar: AppBar(
+          leading: GestureDetector(
+            onTap: () {
+              exit(0);
+            },
+            child: Icon(
+              Icons.close,
+            ),
+          ),
+          backgroundColor: Colors.green,
+          brightness: Brightness.light,
           title: const Text('Voip Caller'),
           actions: <Widget>[
             IconButton(
