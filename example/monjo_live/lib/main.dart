@@ -14,9 +14,15 @@ class MonjoLivePrototype extends StatefulWidget {
   _MonjoLivePrototypeState createState() => _MonjoLivePrototypeState();
 }
 
+enum DialogueAction {
+  cancel,
+  connect,
+}
+
 class _MonjoLivePrototypeState extends State<MonjoLivePrototype> {
   SharedPreferences _preferences;
   String _server = '';
+  bool _isChannelDeclared = false;
 
   @override
   void initState() {
@@ -105,6 +111,36 @@ class _MonjoLivePrototypeState extends State<MonjoLivePrototype> {
       context: context,
       builder: (BuildContext context) {
         return alertUser;
+      },
+    );
+  }
+
+  _userMakingCall<T>(BuildContext context, Widget widget) {
+    showDialog<T>(
+      context: context,
+      builder: (BuildContext context) {
+        return widget;
+      },
+    ).then<void>(
+      (T value) {
+        if (value != null) {
+          if (value == DialogueAction.connect) {
+            _preferences.setString('server', _server);
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (BuildContext context) {
+                  if (_isChannelDeclared) {
+                    // return customsipsever(ip: _server);
+                    logger('<SIP> Custom');
+                  } else {
+                    // return Default Example (ip: _server);
+                  }
+                },
+              ),
+            );
+          }
+        }
       },
     );
   }
