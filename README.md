@@ -7,7 +7,7 @@
 I will be using [Janus - Gateway](https://github.com/meetecho/janus-gateway). For quick installation of ```Janus Gateway``` into your designed server do run :
 
 ```
-sh Installation/(your_operating_system)/janus.sh
+sh install.sh
 ```
 
 <b>$Libraries</b><br/>
