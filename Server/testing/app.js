@@ -1,13 +1,30 @@
-const express = require("express");
-const app = express();
-let http = require("http").Server(app);
+const MediaServer = require("medooze-media-server");
+const SemanticSDP = require("semantic-sdp");
 
-const port = process.env.PORT || 3000;
+//Create UDP server endpoint
+const endpoint = MediaServer.createEndpoint(ip);
 
-let io = require("socket.io")(http);
+//Process the sdp
+var offer = SemanticSDP.SDPInfo.process(sdp);
 
-app.use(express.static("public"));
+//Create an DTLS ICE transport in that enpoint
+const transport = endpoint.createTransport({
+  dtls: offer.getDTLS(),
+  ice: offer.getICE(),
+});
 
-http.listen(port, function () {
-  console.log("Listening on, ", port);
-},);
+//Set RTP remote properties
+transport.setRemoteProperties({
+	audio : offer.getMedia("audio"),
+	video : offer.getMedia("video")
+});
+
+//Get local DTLS and ICE info
+const dtls = transport.getLocalDTLSInfo();
+const ice  = transport.getLocalICEInfo();
+
+//Get local candidates
+const candidates = endpoint.getLocalCandidates();
+
+//Get default capabilities
+const capabilities = MediaServer.getDefaultCapabilities();

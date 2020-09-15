@@ -6,7 +6,11 @@ sleep 2
 sudo apt install apache2
 sudo ufw app list
 sudo ufw allow 'Apache'
-sudo ufw status
+# sudo ufw status
+wget https://github.com/coturn/coturn/archive/4.5.1.3.tar.gz
+tar xvfz 4.5.1.3.tar.gz && sudo rm -r 4.5.1.3.tar.gz
+cd coturn-4.5.1.3
+sudo apt-get install gdebi-core
 sleep 2
 # sudo systemctl status apache2
 sudo apt install net-tools
