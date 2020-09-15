@@ -8,7 +8,7 @@ sudo ufw app list
 sudo ufw allow 'Apache'
 sudo ufw status
 sleep 2
-sudo systemctl status apache2
+# sudo systemctl status apache2
 sudo apt install net-tools
 sudo apt-get install coturn
 sudo apt install nodejs
@@ -65,6 +65,9 @@ sudo make install
 sudo make configs
 ./configure --disable-websockets --disable-data-channels --disable-rabbitmq --disable-mqtt
 cd ..
+cp /janus-gateway /var/
+sudo apt install nginx
+service nginx start
 clear 
 sudo rm -r janus.sh
 # echo ">>>>>>>> 安装完成 <<<<<<<<<<<"
