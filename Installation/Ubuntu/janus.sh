@@ -6,9 +6,13 @@ sleep 2
 sudo apt install apache2
 sudo ufw app list
 sudo ufw allow 'Apache'
-sudo ufw status
+# sudo ufw status
+wget https://github.com/coturn/coturn/archive/4.5.1.3.tar.gz
+tar xvfz 4.5.1.3.tar.gz && sudo rm -r 4.5.1.3.tar.gz
+cd coturn-4.5.1.3
+sudo apt-get install gdebi-core
 sleep 2
-sudo systemctl status apache2
+# sudo systemctl status apache2
 sudo apt install net-tools
 sudo apt-get install coturn
 sudo apt install nodejs
@@ -65,6 +69,9 @@ sudo make install
 sudo make configs
 ./configure --disable-websockets --disable-data-channels --disable-rabbitmq --disable-mqtt
 cd ..
+cp /janus-gateway /var/
+sudo apt install nginx
+service nginx start
 clear 
 sudo rm -r janus.sh
 # echo ">>>>>>>> 安装完成 <<<<<<<<<<<"
