@@ -12,10 +12,6 @@ elif [[ "$OSTYPE" == "cygwin" ]]; then
 elif [[ "$OSTYPE" == "freebsd"* ]]; then
     echo "Freebsd"
 else
-<<<<<<< HEAD
-    echo "Invalid OS"
-=======
     echo "I Guess It is Linux"
     sh Installation/Ubuntu/janus.sh
->>>>>>> 414aa11dd629e24c623cf901844cb96a396b1a38
 fi
