@@ -5,8 +5,8 @@
  */
 
 // 引入插座
-const websocket = require("ws");
-const ws = new websocket.Server({ port: 7080 }, function () {
+import { Server } from "ws";
+const ws = new Server({ port: 7080 }, function () {
   console.log("ws://0.0.0.0:" + 7080);
 }); // <= 创建一个接字对象， 监听端口7080
 
@@ -57,9 +57,9 @@ ws.on("connection", function connection(client_self) {
       message = JSON.parse(message);
       console.log(
         "message.type:: " +
-          message.type +
-          ", \n body: " +
-          JSON.stringify(message)
+        message.type +
+        ", \n body: " +
+        JSON.stringify(message)
       );
     } catch (e) {
       console.error(e.message);
@@ -75,15 +75,102 @@ ws.on("connection", function connection(client_self) {
         // 向客户端发送又新用新用刷新
         updatePeers();
       }
-      break;
+        break;
 
       // 离开房间
       case 'bye': {
-          var session = null;
+        var session = null;
+        session.forEach(function (sess) {
+          if (sess.id == message.session_id) {
+            session = sess;
+          }
+        });
+
+        if (!session) {
+          var msg = {
+            type: "error",
+            data: {
+              error: "Invalid Session" + message.session_id,
+            }
+          };
+          send(client_self, JSON.stringify(msg));
+        }
+        break;
       }
+
       // 转发 offer
+      case 'offer': {
+        var peer = null;
+        clients.forEach(function (client) {
+          if (client.hasOwnProperty('id') && client.id === "" + message.to) {
+            peer = client;
+          }
+        });
+
+        if (peer != null) {
+          msg = {
+            type: "offer",
+            data: {
+              to: peer.id,
+              from: client_self.id,
+              session_id: message.session_id,
+              description: message.description,
+            }
+          };
+
+          send(peer, JSON.stringify(msg));
+
+          peer.session_id = message.session_id;
+          client_self.session_id = message.session_id;
+
+          let session = {
+            id: message.session_id,
+            from: client_self.id,
+            to: peer.id,
+          };
+
+          sessions.push(session);
+        }
+      }
+        break;
+
       // 转发 answer
+      case 'answer': {
+        var msg = {
+          type: "answer",
+          data: {
+            to: messagemessage.to,
+            from: client_self.id,
+            description: message.description,
+          }
+        };
+
+        clients.forEach(function (client) {
+          if (client.id === "" + message.to && client.session_id === message.session_id) {
+            send(client, JSON.stringify(msg));
+          }
+        });
+      }
+        break;
+
       // 收到后选者转发 candidate
+      case 'candidate': {
+        var msg = {
+          type: "candidate",
+          data: {
+            from: client_self.id,
+            to: message.to,
+            candidate: message.candidate,
+          }
+        };
+
+        clients.forEach(function (client) {
+          if (client.id === "" + message.to && client.session_id === message.session_id) {
+            send(client, JSON.stringify(msg));
+          }
+        });
+      }
+        break;
       // keep alive 心跳
     }
   });
@@ -91,11 +178,10 @@ ws.on("connection", function connection(client_self) {
 
 
 // 发送信息
-function send(client , message) {
-    try {
-        client.send(message);
-    } catch(e) {
-        console.error(e.message + "Fail Sending Message");
-    } 
-
+function send(client, message) {
+  try {
+    client.send(message);
+  } catch (e) {
+    console.error(e.message + "Fail Sending Message");
+  }
 }
