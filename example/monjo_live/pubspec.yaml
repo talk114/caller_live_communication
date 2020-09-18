@@ -11,7 +11,9 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  flutter_webrtc: 0.3.0
+  flutter_webrtc: 0.1.7
+  web_socket_channel: 1.1.0
+  random_string: 1.1.0
   shared_preferences: ^0.5.10
   http: ^0.12.0+4
   
