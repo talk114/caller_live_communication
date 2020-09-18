@@ -15,7 +15,11 @@ void main() {
 }
 
 class CallerExample extends StatefulWidget {
-  CallerExample({Key key, this.title}) : super(key: key);
+  CallerExample({
+    Key key,
+    this.title,
+  }) : super(key: key);
+
   final String title;
 
   @override
@@ -25,8 +29,16 @@ class CallerExample extends StatefulWidget {
 class _CallerExampleState extends State<CallerExample> {
   _enterRoom() {
     print('Entering Room...');
-    Navigator.push(context,
-        MaterialPageRoute(builder: (BuildContext context) => PeerToPeer()));
+    Navigator.push(
+      context,
+      MaterialPageRoute(
+        builder: (BuildContext context) {
+          return PeerToPeer(
+            url: '0.0.0.0:7080',
+          );
+        },
+      ),
+    );
   }
 
   @override
@@ -35,12 +47,15 @@ class _CallerExampleState extends State<CallerExample> {
       appBar: AppBar(
         brightness: debugBrightnessOverride,
         backgroundColor: Colors.cyan,
-        title: Text('WEBRTC JANUS'),
+        title: Text(
+          '什么什么的 Janus WebRTC',
+          textAlign: TextAlign.center,
+        ),
       ),
       body: Center(
         child: RaisedButton(
           onPressed: _enterRoom,
-          child: Text('Enter Room'),
+          child: Text('咱们进入呗'),
         ),
       ),
     );

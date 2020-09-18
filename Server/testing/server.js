@@ -5,8 +5,8 @@
  */
 
 // 引入插座
-import { Server } from "ws";
-const ws = new Server({ port: 7080 }, function () {
+const websocket = require("ws");
+const ws = new websocket.Server({ port: 7080 }, function () {
   console.log("ws://0.0.0.0:" + 7080);
 }); // <= 创建一个接字对象， 监听端口7080
 
@@ -34,7 +34,7 @@ function updatePeers() {
       peer.session_id = client.session_id;
     }
 
-    peers.add(peer);
+    peers.push(peer);
   });
 
   var msg = {
