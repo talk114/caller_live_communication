@@ -1,6 +1,6 @@
 /**
  * 這段代碼是為測試而編寫的
- * https://www.bilibili.com/video/BV12E411e7nb?p=5
+ * 受 https://www.bilibili.com/video/BV12E411e7nb?p=5 启发
  * @Author John Melody Me
  */
 
@@ -57,9 +57,9 @@ ws.on("connection", function connection(client_self) {
       message = JSON.parse(message);
       console.log(
         "message.type:: " +
-        message.type +
-        ", \n body: " +
-        JSON.stringify(message)
+          message.type +
+          ", \n body: " +
+          JSON.stringify(message)
       );
     } catch (e) {
       console.error(e.message);
@@ -67,18 +67,19 @@ ws.on("connection", function connection(client_self) {
 
     switch (message.type) {
       // 新成员加入
-      case "new": {
-        client_self.id = "" + message.id;
-        client_self.name = message.name;
-        client_self.user_agent = message.user_agent;
+      case "new":
+        {
+          client_self.id = "" + message.id;
+          client_self.name = message.name;
+          client_self.user_agent = message.user_agent;
 
-        // 向客户端发送又新用新用刷新
-        updatePeers();
-      }
+          // 向客户端发送又新用新用刷新
+          updatePeers();
+        }
         break;
 
       // 离开房间
-      case 'bye': {
+      case "bye": {
         var session = null;
         session.forEach(function (sess) {
           if (sess.id == message.session_id) {
@@ -91,7 +92,7 @@ ws.on("connection", function connection(client_self) {
             type: "error",
             data: {
               error: "Invalid Session" + message.session_id,
-            }
+            },
           };
           send(client_self, JSON.stringify(msg));
         }
@@ -99,83 +100,103 @@ ws.on("connection", function connection(client_self) {
       }
 
       // 转发 offer
-      case 'offer': {
-        var peer = null;
-        clients.forEach(function (client) {
-          if (client.hasOwnProperty('id') && client.id === "" + message.to) {
-            peer = client;
-          }
-        });
-
-        if (peer != null) {
-          msg = {
-            type: "offer",
-            data: {
-              to: peer.id,
-              from: client_self.id,
-              session_id: message.session_id,
-              description: message.description,
+      case "offer":
+        {
+          var peer = null;
+          clients.forEach(function (client) {
+            if (client.hasOwnProperty("id") && client.id === "" + message.to) {
+              peer = client;
             }
-          };
+          });
 
-          send(peer, JSON.stringify(msg));
+          if (peer != null) {
+            msg = {
+              type: "offer",
+              data: {
+                to: peer.id,
+                from: client_self.id,
+                session_id: message.session_id,
+                description: message.description,
+              },
+            };
 
-          peer.session_id = message.session_id;
-          client_self.session_id = message.session_id;
+            send(peer, JSON.stringify(msg));
 
-          let session = {
-            id: message.session_id,
-            from: client_self.id,
-            to: peer.id,
-          };
+            peer.session_id = message.session_id;
+            client_self.session_id = message.session_id;
 
-          sessions.push(session);
+            let session = {
+              id: message.session_id,
+              from: client_self.id,
+              to: peer.id,
+            };
+
+            sessions.push(session);
+          }
         }
-      }
         break;
 
       // 转发 answer
-      case 'answer': {
-        var msg = {
-          type: "answer",
-          data: {
-            to: messagemessage.to,
-            from: client_self.id,
-            description: message.description,
-          }
-        };
+      case "answer":
+        {
+          var msg = {
+            type: "answer",
+            data: {
+              to: messagemessage.to,
+              from: client_self.id,
+              description: message.description,
+            },
+          };
 
-        clients.forEach(function (client) {
-          if (client.id === "" + message.to && client.session_id === message.session_id) {
-            send(client, JSON.stringify(msg));
-          }
-        });
-      }
+          clients.forEach(function (client) {
+            if (
+              client.id === "" + message.to &&
+              client.session_id === message.session_id
+            ) {
+              send(client, JSON.stringify(msg));
+            }
+          });
+        }
         break;
 
       // 收到后选者转发 candidate
-      case 'candidate': {
-        var msg = {
-          type: "candidate",
-          data: {
-            from: client_self.id,
-            to: message.to,
-            candidate: message.candidate,
-          }
-        };
+      case "candidate":
+        {
+          var msg = {
+            type: "candidate",
+            data: {
+              from: client_self.id,
+              to: message.to,
+              candidate: message.candidate,
+            },
+          };
 
-        clients.forEach(function (client) {
-          if (client.id === "" + message.to && client.session_id === message.session_id) {
-            send(client, JSON.stringify(msg));
-          }
-        });
-      }
+          clients.forEach(function (client) {
+            if (
+              client.id === "" + message.to &&
+              client.session_id === message.session_id
+            ) {
+              send(client, JSON.stringify(msg));
+            }
+          });
+        }
         break;
+
       // keep alive 心跳
+      case "keepalie":
+        {
+          send(
+            client_self,
+            JSON.stringify({
+              type: "keepalive",
+              data: {},
+            })
+          );
+        }
+        break;
     }
   });
 });
-
 
 // 发送信息
 function send(client, message) {
