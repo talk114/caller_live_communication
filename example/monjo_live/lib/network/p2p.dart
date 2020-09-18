@@ -3,7 +3,8 @@ import 'dart:io';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_webrtc/webrtc.dart';
-import 'package:monjo_live/signaling.dart';
+import 'package:monjo_live/network/signaling.dart';
+
 
 class PeerToPeer extends StatefulWidget {
   final String url;
