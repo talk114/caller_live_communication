@@ -1,6 +1,6 @@
 import 'package:flutter/Material.dart';
 import 'package:flutter/foundation.dart';
-import 'package:monjo_live/p2p.dart';
+import 'package:monjo_live/network/p2p.dart';
 import 'package:monjo_live/ui/themes.dart';
 
 void main() {
