@@ -43,12 +43,12 @@
 26        android:name="io.flutter.app.FlutterApplication"
 26-->/Users/johnmelody_mynapse/Documents/monjo_live_communication/example/monjo_live/android/app/src/main/AndroidManifest.xml:15:9-57
 27        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-27-->[androidx.core:core:1.1.0] /Users/johnmelody_mynapse/.gradle/caches/transforms-2/files-2.1/7bcac1eefa2bb1f0e62878f30cab7d5d/core-1.1.0/AndroidManifest.xml:24:18-86
+27-->[androidx.core:core:1.5.0-alpha03] /Users/johnmelody_mynapse/.gradle/caches/transforms-2/files-2.1/6451d1f1f78e3ba35b6ea187f81a23dc/core-1.5.0-alpha03/AndroidManifest.xml:24:18-86
 28        android:debuggable="true"
 29        android:icon="@mipmap/ic_launcher"
 29-->/Users/johnmelody_mynapse/Documents/monjo_live_communication/example/monjo_live/android/app/src/main/AndroidManifest.xml:17:9-43
-30        android:label="monjo_live" >
-30-->/Users/johnmelody_mynapse/Documents/monjo_live_communication/example/monjo_live/android/app/src/main/AndroidManifest.xml:16:9-35
+30        android:label="媒体信令平台" >
+30-->/Users/johnmelody_mynapse/Documents/monjo_live_communication/example/monjo_live/android/app/src/main/AndroidManifest.xml:16:9-31
 31        <activity
 31-->/Users/johnmelody_mynapse/Documents/monjo_live_communication/example/monjo_live/android/app/src/main/AndroidManifest.xml:18:9-39:20
 32            android:name="com.example.monjo_live.MainActivity"

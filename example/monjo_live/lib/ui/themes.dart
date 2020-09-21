@@ -9,7 +9,7 @@ class Themes {
 
   static AppBar defaultAppBar = AppBar(
     title: const Text(
-      'Monjo Live',
+      '媒体信令平台',
       style: TextStyle(
         color: Colors.white,
       ),

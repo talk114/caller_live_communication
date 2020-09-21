@@ -3,6 +3,6 @@
 3    package="com.cloudwebrtc.webrtc" >
 4
 5    <uses-sdk android:minSdkVersion="18" />
-5-->/Users/johnmelody_mynapse/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_webrtc-0.1.7/android/src/main/AndroidManifest.xml
+5-->/Users/johnmelody_mynapse/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_webrtc-0.2.8/android/src/main/AndroidManifest.xml
 6
 7</manifest>

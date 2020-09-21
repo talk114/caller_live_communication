@@ -12,10 +12,6 @@
 	<string>6.0</string>
 	<key>CFBundleName</key>
 	<string>媒体信令平台</string>
-	<string>需要访问照相机</string>
-	<key>NSContactsUsageDescription</key>
-	<string>需麦克风接入</string>
-	<key>NSPhotoLibraryUsageDescription</key>
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
@@ -45,5 +41,17 @@
 	</array>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<false/>
+
+	<key>NSMicrophoneUsageDescription</key>
+ 	<string>媒体信令平台要求传声器</string>
+
+	<key>NSCameraUsageDescription</key>
+	<string>媒体信令平台要求摄象机</string>
+
+	<key>NSContactsUsageDescription</key>
+	<string>媒体信令平台请求联系人</string>
+
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>媒体信令平台要求摄象机</string>
 </dict>
 </plist>

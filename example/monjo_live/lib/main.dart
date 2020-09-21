@@ -1,12 +1,8 @@
 import 'dart:io';
-
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_webrtc/rtc_video_view.dart';
 import 'package:flutter_webrtc/webrtc.dart';
 import 'package:monjo_live/ui/themes.dart';
 import 'package:monjo_live/util/logger.dart';
-
 import 'core/permission.dart';
 
 void main() {
@@ -21,10 +17,12 @@ void main() {
 }
 
 class CallerApp extends StatefulWidget {
-  // CallerApp({Key key, this.title}) : super(key: key);
-  // final String title;
+  CallerApp({Key key, this.title}) : super(key: key);
+  final String title;
   @override
-  _CallerAppState createState() => _CallerAppState();
+  _CallerAppState createState() {
+    return _CallerAppState();
+  }
 }
 
 class _CallerAppState extends State<CallerApp> {
@@ -38,10 +36,10 @@ class _CallerAppState extends State<CallerApp> {
 
   @override
   void initState() {
+    super.initState();
     requestPermission();
     initRenderers();
     _getUserMedia();
-    super.initState();
   }
 
   _getUserMedia() async {
@@ -75,12 +73,18 @@ class _CallerAppState extends State<CallerApp> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: Themes.defaultAppBar,
-      backgroundColor: Colors.white,
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
+      body: Container(
+        child: Stack(
           children: <Widget>[
-            Text('Testing 123'),
+            Positioned(
+              top: 0.0,
+              right: 0.0,
+              left: 0.0,
+              bottom: 0.0,
+              child: Container(
+                child: RTCVideoView(_localRenderer),
+              ),
+            ),
           ],
         ),
       ),
