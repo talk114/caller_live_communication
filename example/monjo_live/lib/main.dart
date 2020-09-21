@@ -84,7 +84,7 @@ class _CallerAppState extends State<CallerApp> {
           {
             'candidate': e.candidate.toString(),
             'sdpMid': e.sdpMid.toString(),
-            'sdpMlineIndex': e.sdpMlineIndex.toString(),
+            'sdpMlineIndex': e.sdpMlineIndex,
           },
         ));
       } else {
@@ -130,8 +130,27 @@ class _CallerAppState extends State<CallerApp> {
     }
   }
 
-  void _setCandicdate() {}
-  void _setRemoteDescription() {}
+  void _setCandidate() async {
+    String jsonString = sdpController.text;
+    dynamic session = await jsonDecode('$jsonString');
+    print(session['candidate']);
+    dynamic candidate = RTCIceCandidate(
+        session['candidate'], session['sdpMid'], session['sdpMlineIndex']);
+    await _peerConnection.addCandidate(candidate);
+  }
+
+  void _setRemoteDescription() async {
+    String jsonString = sdpController.text;
+    dynamic session = await jsonDecode('$jsonString');
+    String sdp = write(session, null);
+
+    RTCSessionDescription description =
+        RTCSessionDescription(sdp, _offer ? 'answer' : 'offer');
+
+    print(description.toMap());
+
+    await _peerConnection.setRemoteDescription(description);
+  }
 
   void _createOffer() async {
     RTCSessionDescription description =
@@ -146,14 +165,21 @@ class _CallerAppState extends State<CallerApp> {
     _peerConnection.setLocalDescription(description);
   }
 
-  void _createAnswer() {}
+  void _createAnswer() async {
+    RTCSessionDescription description =
+        await _peerConnection.createAnswer({'offerToReceiveVideo': 1});
+    var session = parse(description.sdp);
+    print(json.encode(session));
+
+    _peerConnection.setLocalDescription(description);
+  }
 
   /// Logic Components : END ///
   ///
   /// START: User Interface Components ///
   SizedBox videoRenderers() {
     return SizedBox(
-      height: 150,
+      height: 180,
       child: Row(
         children: <Widget>[
           Flexible(
@@ -190,9 +216,7 @@ class _CallerAppState extends State<CallerApp> {
           padding: EdgeInsets.fromLTRB(50, 10, 50, 10),
         ),
         RaisedButton(
-          onPressed: () {
-            logger('Answer');
-          },
+          onPressed: _createAnswer,
           child: const Text('回应'),
           color: Colors.amber,
           padding: EdgeInsets.fromLTRB(50, 10, 50, 10),
@@ -215,45 +239,45 @@ class _CallerAppState extends State<CallerApp> {
 
   Row sdpCandidateButtons() {
     return Row(
-        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-        children: <Widget>[
-          /// set  remote description
-          RaisedButton(
-            onPressed: _setRemoteDescription,
-            onLongPress: () {
-              var snackBar = SnackBar(
-                content: Text('Set  Remote Description'),
-                action: SnackBarAction(
-                  label: 'Undo',
-                  onPressed: () {},
-                ),
-              );
-              Scaffold.of(context).showSnackBar(snackBar);
-            },
-            child: const Text('设置远程描述'),
-            color: Colors.amber,
-            padding: EdgeInsets.fromLTRB(50, 10, 50, 10),
-          ),
+      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+      children: <Widget>[
+        /// set  remote description
+        RaisedButton(
+          onPressed: _setRemoteDescription,
+          onLongPress: () {
+            var snackBar = SnackBar(
+              content: Text('Set  Remote Description'),
+              action: SnackBarAction(
+                label: 'Undo',
+                onPressed: () {},
+              ),
+            );
+            Scaffold.of(context).showSnackBar(snackBar);
+          },
+          child: const Text('设置远程描述'),
+          color: Colors.amber,
+          padding: EdgeInsets.fromLTRB(50, 10, 50, 10),
+        ),
 
-          /// set  remote description
-          RaisedButton(
-            onPressed: _setCandicdate,
-            onLongPress: () {
-              var snackBar = SnackBar(
-                content: Text('Set Candicdate'),
-                action: SnackBarAction(
-                  label: 'Undo',
-                  onPressed: () {},
-                ),
-              );
-              Scaffold.of(context).showSnackBar(snackBar);
-            },
-            child: const Text('集合候选'),
-            color: Colors.amber,
-            padding: EdgeInsets.fromLTRB(50, 10, 50, 10),
-          ),
-        ],
-      );
+        /// set  remote description
+        RaisedButton(
+          onPressed: _setCandidate,
+          onLongPress: () {
+            var snackBar = SnackBar(
+              content: Text('Set Candicdate'),
+              action: SnackBarAction(
+                label: 'Undo',
+                onPressed: () {},
+              ),
+            );
+            Scaffold.of(context).showSnackBar(snackBar);
+          },
+          child: const Text('集合候选'),
+          color: Colors.amber,
+          padding: EdgeInsets.fromLTRB(50, 10, 50, 10),
+        ),
+      ],
+    );
   }
 
   @override
