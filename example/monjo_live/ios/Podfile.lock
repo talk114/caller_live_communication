@@ -8,11 +8,14 @@ PODS:
   - libyuv-iOS (1.0.2)
   - shared_preferences (0.0.1):
     - Flutter
+  - simple_permissions (0.0.1):
+    - Flutter
 
 DEPENDENCIES:
   - Flutter (from `Flutter`)
   - flutter_webrtc (from `.symlinks/plugins/flutter_webrtc/ios`)
   - shared_preferences (from `.symlinks/plugins/shared_preferences/ios`)
+  - simple_permissions (from `.symlinks/plugins/simple_permissions/ios`)
 
 SPEC REPOS:
   trunk:
@@ -26,6 +29,8 @@ EXTERNAL SOURCES:
     :path: ".symlinks/plugins/flutter_webrtc/ios"
   shared_preferences:
     :path: ".symlinks/plugins/shared_preferences/ios"
+  simple_permissions:
+    :path: ".symlinks/plugins/simple_permissions/ios"
 
 SPEC CHECKSUMS:
   Flutter: 0e3d915762c693b495b44d77113d4970485de6ec
@@ -33,7 +38,8 @@ SPEC CHECKSUMS:
   GoogleWebRTC: 893a5f2f3635437ec3b05ef240993d5713307804
   libyuv-iOS: 5a154ccc84ec754029886ecb607512731fe30640
   shared_preferences: af6bfa751691cdc24be3045c43ec037377ada40d
+  simple_permissions: 149cd87a11f83c24bf99f6e8a82f9fc8b70be233
 
-PODFILE CHECKSUM: a75497545d4391e2d394c3668e20cfb1c2bbd4aa
+PODFILE CHECKSUM: 7368163408c647b7eb699d0d788ba6718e18fb8d
 
 COCOAPODS: 1.10.0.beta.1

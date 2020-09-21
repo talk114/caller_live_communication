@@ -194,6 +194,12 @@
       "languageVersion": "2.1"
     },
     {
+      "name": "simple_permissions",
+      "rootUri": "file:///Users/johnmelody_mynapse/flutter/.pub-cache/hosted/pub.dartlang.org/simple_permissions-0.1.9",
+      "packageUri": "lib/",
+      "languageVersion": "2.0"
+    },
+    {
       "name": "sky_engine",
       "rootUri": "file:///Users/johnmelody_mynapse/flutter/bin/cache/pkg/sky_engine",
       "packageUri": "lib/",
@@ -266,7 +272,7 @@
       "languageVersion": "2.7"
     }
   ],
-  "generated": "2020-09-18T06:12:19.250388Z",
+  "generated": "2020-09-21T04:00:50.102071Z",
   "generator": "pub",
   "generatorVersion": "2.9.1"
 }

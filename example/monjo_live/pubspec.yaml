@@ -16,6 +16,7 @@ dependencies:
   random_string: 1.1.0
   shared_preferences: ^0.5.10
   http: ^0.12.0+4
+  simple_permissions: ^0.1.9
   
 
 

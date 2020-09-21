@@ -11,7 +11,11 @@
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>
-	<string>monjo_live</string>
+	<string>媒体信令平台</string>
+	<string>需要访问照相机</string>
+	<key>NSContactsUsageDescription</key>
+	<string>需麦克风接入</string>
+	<key>NSPhotoLibraryUsageDescription</key>
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>

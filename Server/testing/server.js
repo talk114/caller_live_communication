@@ -7,7 +7,7 @@
 // 引入插座
 const websocket = require("ws");
 const ws = new websocket.Server({ port: 7080 }, function () {
-  console.log("ws://0.0.0.0:" + 7080);
+  console.log("0.0.0.0:" + 7080);
 }); // <= 创建一个接字对象， 监听端口7080
 
 // 保存连接socket对象的set容器
