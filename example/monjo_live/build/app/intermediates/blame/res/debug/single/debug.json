@@ -108,10 +108,6 @@
         "source": "/Users/johnmelody_mynapse/.gradle/caches/transforms-2/files-2.1/033944467dbd0fa998eb36a3c9fee84c/media-1.0.0/res/layout/notification_template_big_media_narrow.xml"
     },
     {
-        "merged": "/Users/johnmelody_mynapse/Documents/monjo_live_communication/example/monjo_live/build/app/intermediates/res/merged/debug/mipmap-hdpi_ic_launcher.png.flat",
-        "source": "/Users/johnmelody_mynapse/Documents/monjo_live_communication/example/monjo_live/android/app/src/main/res/mipmap-hdpi/ic_launcher.png"
-    },
-    {
         "merged": "/Users/johnmelody_mynapse/Documents/monjo_live_communication/example/monjo_live/build/app/intermediates/res/merged/debug/drawable_notification_tile_bg.xml.flat",
         "source": "/Users/johnmelody_mynapse/.gradle/caches/transforms-2/files-2.1/6451d1f1f78e3ba35b6ea187f81a23dc/core-1.5.0-alpha03/res/drawable/notification_tile_bg.xml"
     },
