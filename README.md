@@ -34,7 +34,7 @@ turnserver-cli  5766/tcp                        # Coturn
 
 
 <b>$Libraries</b><br/>
-[flutter-webrtc](https://github.com/flutter-webrtc/flutter-webrtc), Version: flutter_webrtc: ^0.2.8 <br/>
+[flutter-webrtc](https://github.com/flutter-webrtc/flutter-webrtc), Version: flutter_webrtc: 0.2.8 <br/>
 [coturn](https://github.com/coturn/coturn)<br/>
 
 
