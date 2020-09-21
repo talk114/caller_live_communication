@@ -34,9 +34,11 @@ turnserver-cli  5766/tcp                        # Coturn
 
 
 <b>$Libraries</b><br/>
-[flutter-webrtc](https://github.com/flutter-webrtc/flutter-webrtc) <br/>
+[flutter-webrtc](https://github.com/flutter-webrtc/flutter-webrtc), Version: flutter_webrtc: ^0.2.8 <br/>
 [coturn](https://github.com/coturn/coturn)<br/>
 
 
 <b>$Support</b><br/>
 Email: [johnmelodyme@yandex.com](mailto:johnmelodyme@yandex.com )
+<b>Donate</b>
+[](https://github.com/johnmelodyme/ShortestPathAlgorithm/blob/master/assets/wechat.png?raw=true)
