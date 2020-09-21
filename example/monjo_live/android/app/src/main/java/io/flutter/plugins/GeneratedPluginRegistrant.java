@@ -17,5 +17,6 @@ public final class GeneratedPluginRegistrant {
     ShimPluginRegistry shimPluginRegistry = new ShimPluginRegistry(flutterEngine);
       com.cloudwebrtc.webrtc.FlutterWebRTCPlugin.registerWith(shimPluginRegistry.registrarFor("com.cloudwebrtc.webrtc.FlutterWebRTCPlugin"));
     flutterEngine.getPlugins().add(new io.flutter.plugins.sharedpreferences.SharedPreferencesPlugin());
+      com.ethras.simplepermissions.SimplePermissionsPlugin.registerWith(shimPluginRegistry.registrarFor("com.ethras.simplepermissions.SimplePermissionsPlugin"));
   }
 }

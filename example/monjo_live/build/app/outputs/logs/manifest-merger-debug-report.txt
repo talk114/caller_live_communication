@@ -6,13 +6,24 @@ INJECTED from /Users/johnmelody_mynapse/Documents/monjo_live_communication/examp
 INJECTED from /Users/johnmelody_mynapse/Documents/monjo_live_communication/example/monjo_live/android/app/src/main/AndroidManifest.xml:1:1-45:12
 MERGED from /Users/johnmelody_mynapse/Documents/monjo_live_communication/example/monjo_live/android/app/src/main/AndroidManifest.xml:1:1-45:12
 MERGED from [:shared_preferences] /Users/johnmelody_mynapse/Documents/monjo_live_communication/example/monjo_live/build/shared_preferences/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-7:12
+MERGED from [:simple_permissions] /Users/johnmelody_mynapse/Documents/monjo_live_communication/example/monjo_live/build/simple_permissions/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-7:12
 MERGED from [:flutter_webrtc] /Users/johnmelody_mynapse/Documents/monjo_live_communication/example/monjo_live/build/flutter_webrtc/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.legacy:legacy-support-v4:1.0.0] /Users/johnmelody_mynapse/.gradle/caches/transforms-2/files-2.1/67fb902d229cfd2848b7884a36ab7f02/legacy-support-v4-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.fragment:fragment:1.1.0] /Users/johnmelody_mynapse/.gradle/caches/transforms-2/files-2.1/0d8c9646d50309d8f187f76ba85282d8/fragment-1.1.0/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.activity:activity:1.0.0] /Users/johnmelody_mynapse/.gradle/caches/transforms-2/files-2.1/bc7b6c804c9113751490af620660fa53/activity-1.0.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.core:core-ktx:1.5.0-alpha03] /Users/johnmelody_mynapse/.gradle/caches/transforms-2/files-2.1/e31aa45033662e493269755c9cdb8ed5/core-ktx-1.5.0-alpha03/AndroidManifest.xml:2:1-9:12
+MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] /Users/johnmelody_mynapse/.gradle/caches/transforms-2/files-2.1/b0b33025d59b3d0e658b3c07d2fc743e/legacy-support-core-ui-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.viewpager:viewpager:1.0.0] /Users/johnmelody_mynapse/.gradle/caches/transforms-2/files-2.1/fb9d824a69d0e4b2b7c94d5ff07f8ecd/viewpager-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] /Users/johnmelody_mynapse/.gradle/caches/transforms-2/files-2.1/d48246d16981780ebfd1fae54049d710/legacy-support-core-utils-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.loader:loader:1.0.0] /Users/johnmelody_mynapse/.gradle/caches/transforms-2/files-2.1/77dcc29b1c766076d04584239156ec98/loader-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.media:media:1.0.0] /Users/johnmelody_mynapse/.gradle/caches/transforms-2/files-2.1/033944467dbd0fa998eb36a3c9fee84c/media-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.0.0] /Users/johnmelody_mynapse/.gradle/caches/transforms-2/files-2.1/0ac026603a0ef96cdb36e7ba9f9e55fd/coordinatorlayout-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] /Users/johnmelody_mynapse/.gradle/caches/transforms-2/files-2.1/8a53523a3c8d710d17d5949f3f565490/drawerlayout-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] /Users/johnmelody_mynapse/.gradle/caches/transforms-2/files-2.1/1a55c145823fef109a2894a977b97ee8/slidingpanelayout-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.customview:customview:1.0.0] /Users/johnmelody_mynapse/.gradle/caches/transforms-2/files-2.1/2e95c5f7e18d409bb815b2ed5ddad6e1/customview-1.0.0/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.core:core:1.1.0] /Users/johnmelody_mynapse/.gradle/caches/transforms-2/files-2.1/7bcac1eefa2bb1f0e62878f30cab7d5d/core-1.1.0/AndroidManifest.xml:17:1-26:12
+MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] /Users/johnmelody_mynapse/.gradle/caches/transforms-2/files-2.1/9b5bb162978f5d5b42badd4715470868/swiperefreshlayout-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] /Users/johnmelody_mynapse/.gradle/caches/transforms-2/files-2.1/3c0a4eef6b8e0e29aa7296b250f704dc/asynclayoutinflater-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.core:core:1.5.0-alpha03] /Users/johnmelody_mynapse/.gradle/caches/transforms-2/files-2.1/6451d1f1f78e3ba35b6ea187f81a23dc/core-1.5.0-alpha03/AndroidManifest.xml:17:1-26:12
 MERGED from [androidx.lifecycle:lifecycle-runtime:2.2.0] /Users/johnmelody_mynapse/.gradle/caches/transforms-2/files-2.1/11944c65ad7aa7a667dd206ce324df23/lifecycle-runtime-2.2.0/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.savedstate:savedstate:1.0.0] /Users/johnmelody_mynapse/.gradle/caches/transforms-2/files-2.1/f32ac51df9ae129b3ba391738f40f284/savedstate-1.0.0/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] /Users/johnmelody_mynapse/.gradle/caches/transforms-2/files-2.1/8e113eaf4002616ba0f1965013c7c206/lifecycle-livedata-2.0.0/AndroidManifest.xml:17:1-22:12
@@ -20,7 +31,12 @@ MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] /Users/johnmelody
 MERGED from [androidx.arch.core:core-runtime:2.0.0] /Users/johnmelody_mynapse/.gradle/caches/transforms-2/files-2.1/3fa70b3925c5631b9d08ef7ad9720a24/core-runtime-2.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] /Users/johnmelody_mynapse/.gradle/caches/transforms-2/files-2.1/dbde93d0329ab71319f7a1c7d1847fab/versionedparcelable-1.1.0/AndroidManifest.xml:17:1-27:12
 MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.1.0] /Users/johnmelody_mynapse/.gradle/caches/transforms-2/files-2.1/29a21c01d1399bf6510e4bea28de667a/lifecycle-viewmodel-2.1.0/AndroidManifest.xml:17:1-22:12
-MERGED from [org.webrtc:google-webrtc:1.0.30039] /Users/johnmelody_mynapse/.gradle/caches/transforms-2/files-2.1/f13c1d0b0cdb654a7e42fb41689f5fbb/jetified-google-webrtc-1.0.30039/AndroidManifest.xml:11:1-14:12
+MERGED from [androidx.documentfile:documentfile:1.0.0] /Users/johnmelody_mynapse/.gradle/caches/transforms-2/files-2.1/242196f56dd6954e5cd8271474a58c26/documentfile-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /Users/johnmelody_mynapse/.gradle/caches/transforms-2/files-2.1/fc14a1045a3b54ebf10e62ee1a7e8ae0/localbroadcastmanager-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.print:print:1.0.0] /Users/johnmelody_mynapse/.gradle/caches/transforms-2/files-2.1/2f7d7a2ed382a639181d1a57afb84df2/print-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.interpolator:interpolator:1.0.0] /Users/johnmelody_mynapse/.gradle/caches/transforms-2/files-2.1/17bc7170cee91fceb72112256832671c/interpolator-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /Users/johnmelody_mynapse/.gradle/caches/transforms-2/files-2.1/ec80b48c6a0f03369f06e0b064ae35b5/cursoradapter-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [org.webrtc:google-webrtc:1.0.28262] /Users/johnmelody_mynapse/.gradle/caches/transforms-2/files-2.1/4ffb3894b0c505b62b3fc7165d0af551/jetified-google-webrtc-1.0.28262/AndroidManifest.xml:11:1-14:12
 INJECTED from /Users/johnmelody_mynapse/Documents/monjo_live_communication/example/monjo_live/android/app/src/debug/AndroidManifest.xml:1:1-7:12
 INJECTED from /Users/johnmelody_mynapse/Documents/monjo_live_communication/example/monjo_live/android/app/src/debug/AndroidManifest.xml:1:1-7:12
 INJECTED from /Users/johnmelody_mynapse/Documents/monjo_live_communication/example/monjo_live/android/app/src/debug/AndroidManifest.xml:1:1-7:12
@@ -74,14 +90,14 @@ ADDED from /Users/johnmelody_mynapse/Documents/monjo_live_communication/example/
 		ADDED from /Users/johnmelody_mynapse/Documents/monjo_live_communication/example/monjo_live/android/app/src/main/AndroidManifest.xml:11:22-77
 application
 ADDED from /Users/johnmelody_mynapse/Documents/monjo_live_communication/example/monjo_live/android/app/src/main/AndroidManifest.xml:14:5-44:19
-MERGED from [androidx.core:core:1.1.0] /Users/johnmelody_mynapse/.gradle/caches/transforms-2/files-2.1/7bcac1eefa2bb1f0e62878f30cab7d5d/core-1.1.0/AndroidManifest.xml:24:5-89
-MERGED from [androidx.core:core:1.1.0] /Users/johnmelody_mynapse/.gradle/caches/transforms-2/files-2.1/7bcac1eefa2bb1f0e62878f30cab7d5d/core-1.1.0/AndroidManifest.xml:24:5-89
+MERGED from [androidx.core:core:1.5.0-alpha03] /Users/johnmelody_mynapse/.gradle/caches/transforms-2/files-2.1/6451d1f1f78e3ba35b6ea187f81a23dc/core-1.5.0-alpha03/AndroidManifest.xml:24:5-89
+MERGED from [androidx.core:core:1.5.0-alpha03] /Users/johnmelody_mynapse/.gradle/caches/transforms-2/files-2.1/6451d1f1f78e3ba35b6ea187f81a23dc/core-1.5.0-alpha03/AndroidManifest.xml:24:5-89
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] /Users/johnmelody_mynapse/.gradle/caches/transforms-2/files-2.1/dbde93d0329ab71319f7a1c7d1847fab/versionedparcelable-1.1.0/AndroidManifest.xml:24:5-25:19
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] /Users/johnmelody_mynapse/.gradle/caches/transforms-2/files-2.1/dbde93d0329ab71319f7a1c7d1847fab/versionedparcelable-1.1.0/AndroidManifest.xml:24:5-25:19
 	android:appComponentFactory
-		ADDED from [androidx.core:core:1.1.0] /Users/johnmelody_mynapse/.gradle/caches/transforms-2/files-2.1/7bcac1eefa2bb1f0e62878f30cab7d5d/core-1.1.0/AndroidManifest.xml:24:18-86
+		ADDED from [androidx.core:core:1.5.0-alpha03] /Users/johnmelody_mynapse/.gradle/caches/transforms-2/files-2.1/6451d1f1f78e3ba35b6ea187f81a23dc/core-1.5.0-alpha03/AndroidManifest.xml:24:18-86
 	android:label
-		ADDED from /Users/johnmelody_mynapse/Documents/monjo_live_communication/example/monjo_live/android/app/src/main/AndroidManifest.xml:16:9-35
+		ADDED from /Users/johnmelody_mynapse/Documents/monjo_live_communication/example/monjo_live/android/app/src/main/AndroidManifest.xml:16:9-31
 	android:icon
 		ADDED from /Users/johnmelody_mynapse/Documents/monjo_live_communication/example/monjo_live/android/app/src/main/AndroidManifest.xml:17:9-43
 	android:name
@@ -134,20 +150,42 @@ INJECTED from /Users/johnmelody_mynapse/Documents/monjo_live_communication/examp
 INJECTED from /Users/johnmelody_mynapse/Documents/monjo_live_communication/example/monjo_live/android/app/src/main/AndroidManifest.xml
 MERGED from [:shared_preferences] /Users/johnmelody_mynapse/Documents/monjo_live_communication/example/monjo_live/build/shared_preferences/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
 MERGED from [:shared_preferences] /Users/johnmelody_mynapse/Documents/monjo_live_communication/example/monjo_live/build/shared_preferences/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [:simple_permissions] /Users/johnmelody_mynapse/Documents/monjo_live_communication/example/monjo_live/build/simple_permissions/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [:simple_permissions] /Users/johnmelody_mynapse/Documents/monjo_live_communication/example/monjo_live/build/simple_permissions/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
 MERGED from [:flutter_webrtc] /Users/johnmelody_mynapse/Documents/monjo_live_communication/example/monjo_live/build/flutter_webrtc/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
 MERGED from [:flutter_webrtc] /Users/johnmelody_mynapse/Documents/monjo_live_communication/example/monjo_live/build/flutter_webrtc/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [androidx.legacy:legacy-support-v4:1.0.0] /Users/johnmelody_mynapse/.gradle/caches/transforms-2/files-2.1/67fb902d229cfd2848b7884a36ab7f02/legacy-support-v4-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-v4:1.0.0] /Users/johnmelody_mynapse/.gradle/caches/transforms-2/files-2.1/67fb902d229cfd2848b7884a36ab7f02/legacy-support-v4-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.fragment:fragment:1.1.0] /Users/johnmelody_mynapse/.gradle/caches/transforms-2/files-2.1/0d8c9646d50309d8f187f76ba85282d8/fragment-1.1.0/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.fragment:fragment:1.1.0] /Users/johnmelody_mynapse/.gradle/caches/transforms-2/files-2.1/0d8c9646d50309d8f187f76ba85282d8/fragment-1.1.0/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.activity:activity:1.0.0] /Users/johnmelody_mynapse/.gradle/caches/transforms-2/files-2.1/bc7b6c804c9113751490af620660fa53/activity-1.0.0/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.activity:activity:1.0.0] /Users/johnmelody_mynapse/.gradle/caches/transforms-2/files-2.1/bc7b6c804c9113751490af620660fa53/activity-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.core:core-ktx:1.5.0-alpha03] /Users/johnmelody_mynapse/.gradle/caches/transforms-2/files-2.1/e31aa45033662e493269755c9cdb8ed5/core-ktx-1.5.0-alpha03/AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.core:core-ktx:1.5.0-alpha03] /Users/johnmelody_mynapse/.gradle/caches/transforms-2/files-2.1/e31aa45033662e493269755c9cdb8ed5/core-ktx-1.5.0-alpha03/AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] /Users/johnmelody_mynapse/.gradle/caches/transforms-2/files-2.1/b0b33025d59b3d0e658b3c07d2fc743e/legacy-support-core-ui-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] /Users/johnmelody_mynapse/.gradle/caches/transforms-2/files-2.1/b0b33025d59b3d0e658b3c07d2fc743e/legacy-support-core-ui-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.viewpager:viewpager:1.0.0] /Users/johnmelody_mynapse/.gradle/caches/transforms-2/files-2.1/fb9d824a69d0e4b2b7c94d5ff07f8ecd/viewpager-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.viewpager:viewpager:1.0.0] /Users/johnmelody_mynapse/.gradle/caches/transforms-2/files-2.1/fb9d824a69d0e4b2b7c94d5ff07f8ecd/viewpager-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] /Users/johnmelody_mynapse/.gradle/caches/transforms-2/files-2.1/d48246d16981780ebfd1fae54049d710/legacy-support-core-utils-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] /Users/johnmelody_mynapse/.gradle/caches/transforms-2/files-2.1/d48246d16981780ebfd1fae54049d710/legacy-support-core-utils-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.loader:loader:1.0.0] /Users/johnmelody_mynapse/.gradle/caches/transforms-2/files-2.1/77dcc29b1c766076d04584239156ec98/loader-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.loader:loader:1.0.0] /Users/johnmelody_mynapse/.gradle/caches/transforms-2/files-2.1/77dcc29b1c766076d04584239156ec98/loader-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.media:media:1.0.0] /Users/johnmelody_mynapse/.gradle/caches/transforms-2/files-2.1/033944467dbd0fa998eb36a3c9fee84c/media-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.media:media:1.0.0] /Users/johnmelody_mynapse/.gradle/caches/transforms-2/files-2.1/033944467dbd0fa998eb36a3c9fee84c/media-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.0.0] /Users/johnmelody_mynapse/.gradle/caches/transforms-2/files-2.1/0ac026603a0ef96cdb36e7ba9f9e55fd/coordinatorlayout-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.0.0] /Users/johnmelody_mynapse/.gradle/caches/transforms-2/files-2.1/0ac026603a0ef96cdb36e7ba9f9e55fd/coordinatorlayout-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] /Users/johnmelody_mynapse/.gradle/caches/transforms-2/files-2.1/8a53523a3c8d710d17d5949f3f565490/drawerlayout-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] /Users/johnmelody_mynapse/.gradle/caches/transforms-2/files-2.1/8a53523a3c8d710d17d5949f3f565490/drawerlayout-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] /Users/johnmelody_mynapse/.gradle/caches/transforms-2/files-2.1/1a55c145823fef109a2894a977b97ee8/slidingpanelayout-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] /Users/johnmelody_mynapse/.gradle/caches/transforms-2/files-2.1/1a55c145823fef109a2894a977b97ee8/slidingpanelayout-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.customview:customview:1.0.0] /Users/johnmelody_mynapse/.gradle/caches/transforms-2/files-2.1/2e95c5f7e18d409bb815b2ed5ddad6e1/customview-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.customview:customview:1.0.0] /Users/johnmelody_mynapse/.gradle/caches/transforms-2/files-2.1/2e95c5f7e18d409bb815b2ed5ddad6e1/customview-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.core:core:1.1.0] /Users/johnmelody_mynapse/.gradle/caches/transforms-2/files-2.1/7bcac1eefa2bb1f0e62878f30cab7d5d/core-1.1.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.core:core:1.1.0] /Users/johnmelody_mynapse/.gradle/caches/transforms-2/files-2.1/7bcac1eefa2bb1f0e62878f30cab7d5d/core-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] /Users/johnmelody_mynapse/.gradle/caches/transforms-2/files-2.1/9b5bb162978f5d5b42badd4715470868/swiperefreshlayout-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] /Users/johnmelody_mynapse/.gradle/caches/transforms-2/files-2.1/9b5bb162978f5d5b42badd4715470868/swiperefreshlayout-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] /Users/johnmelody_mynapse/.gradle/caches/transforms-2/files-2.1/3c0a4eef6b8e0e29aa7296b250f704dc/asynclayoutinflater-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] /Users/johnmelody_mynapse/.gradle/caches/transforms-2/files-2.1/3c0a4eef6b8e0e29aa7296b250f704dc/asynclayoutinflater-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.core:core:1.5.0-alpha03] /Users/johnmelody_mynapse/.gradle/caches/transforms-2/files-2.1/6451d1f1f78e3ba35b6ea187f81a23dc/core-1.5.0-alpha03/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.core:core:1.5.0-alpha03] /Users/johnmelody_mynapse/.gradle/caches/transforms-2/files-2.1/6451d1f1f78e3ba35b6ea187f81a23dc/core-1.5.0-alpha03/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.lifecycle:lifecycle-runtime:2.2.0] /Users/johnmelody_mynapse/.gradle/caches/transforms-2/files-2.1/11944c65ad7aa7a667dd206ce324df23/lifecycle-runtime-2.2.0/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.lifecycle:lifecycle-runtime:2.2.0] /Users/johnmelody_mynapse/.gradle/caches/transforms-2/files-2.1/11944c65ad7aa7a667dd206ce324df23/lifecycle-runtime-2.2.0/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.savedstate:savedstate:1.0.0] /Users/johnmelody_mynapse/.gradle/caches/transforms-2/files-2.1/f32ac51df9ae129b3ba391738f40f284/savedstate-1.0.0/AndroidManifest.xml:20:5-22:41
@@ -162,8 +200,18 @@ MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] /Users/john
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] /Users/johnmelody_mynapse/.gradle/caches/transforms-2/files-2.1/dbde93d0329ab71319f7a1c7d1847fab/versionedparcelable-1.1.0/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.1.0] /Users/johnmelody_mynapse/.gradle/caches/transforms-2/files-2.1/29a21c01d1399bf6510e4bea28de667a/lifecycle-viewmodel-2.1.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.1.0] /Users/johnmelody_mynapse/.gradle/caches/transforms-2/files-2.1/29a21c01d1399bf6510e4bea28de667a/lifecycle-viewmodel-2.1.0/AndroidManifest.xml:20:5-44
-MERGED from [org.webrtc:google-webrtc:1.0.30039] /Users/johnmelody_mynapse/.gradle/caches/transforms-2/files-2.1/f13c1d0b0cdb654a7e42fb41689f5fbb/jetified-google-webrtc-1.0.30039/AndroidManifest.xml:13:3-72
-MERGED from [org.webrtc:google-webrtc:1.0.30039] /Users/johnmelody_mynapse/.gradle/caches/transforms-2/files-2.1/f13c1d0b0cdb654a7e42fb41689f5fbb/jetified-google-webrtc-1.0.30039/AndroidManifest.xml:13:3-72
+MERGED from [androidx.documentfile:documentfile:1.0.0] /Users/johnmelody_mynapse/.gradle/caches/transforms-2/files-2.1/242196f56dd6954e5cd8271474a58c26/documentfile-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.documentfile:documentfile:1.0.0] /Users/johnmelody_mynapse/.gradle/caches/transforms-2/files-2.1/242196f56dd6954e5cd8271474a58c26/documentfile-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /Users/johnmelody_mynapse/.gradle/caches/transforms-2/files-2.1/fc14a1045a3b54ebf10e62ee1a7e8ae0/localbroadcastmanager-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /Users/johnmelody_mynapse/.gradle/caches/transforms-2/files-2.1/fc14a1045a3b54ebf10e62ee1a7e8ae0/localbroadcastmanager-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.print:print:1.0.0] /Users/johnmelody_mynapse/.gradle/caches/transforms-2/files-2.1/2f7d7a2ed382a639181d1a57afb84df2/print-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.print:print:1.0.0] /Users/johnmelody_mynapse/.gradle/caches/transforms-2/files-2.1/2f7d7a2ed382a639181d1a57afb84df2/print-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.interpolator:interpolator:1.0.0] /Users/johnmelody_mynapse/.gradle/caches/transforms-2/files-2.1/17bc7170cee91fceb72112256832671c/interpolator-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.interpolator:interpolator:1.0.0] /Users/johnmelody_mynapse/.gradle/caches/transforms-2/files-2.1/17bc7170cee91fceb72112256832671c/interpolator-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /Users/johnmelody_mynapse/.gradle/caches/transforms-2/files-2.1/ec80b48c6a0f03369f06e0b064ae35b5/cursoradapter-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /Users/johnmelody_mynapse/.gradle/caches/transforms-2/files-2.1/ec80b48c6a0f03369f06e0b064ae35b5/cursoradapter-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [org.webrtc:google-webrtc:1.0.28262] /Users/johnmelody_mynapse/.gradle/caches/transforms-2/files-2.1/4ffb3894b0c505b62b3fc7165d0af551/jetified-google-webrtc-1.0.28262/AndroidManifest.xml:13:3-72
+MERGED from [org.webrtc:google-webrtc:1.0.28262] /Users/johnmelody_mynapse/.gradle/caches/transforms-2/files-2.1/4ffb3894b0c505b62b3fc7165d0af551/jetified-google-webrtc-1.0.28262/AndroidManifest.xml:13:3-72
 INJECTED from /Users/johnmelody_mynapse/Documents/monjo_live_communication/example/monjo_live/android/app/src/debug/AndroidManifest.xml
 INJECTED from /Users/johnmelody_mynapse/Documents/monjo_live_communication/example/monjo_live/android/app/src/debug/AndroidManifest.xml
 	android:targetSdkVersion

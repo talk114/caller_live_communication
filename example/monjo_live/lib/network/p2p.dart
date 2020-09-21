@@ -21,7 +21,7 @@ class _PeerToPeerState extends State<PeerToPeer> {
   String serverUrl;
   String _displayName =
       '${Platform.localeName.substring(0, 2)} + (${Platform.operatingSystem})';
-  Signaling _signaling;
+  Signaling _signaling = Signaling();
   RTCVideoRenderer _localRenderer = RTCVideoRenderer();
   RTCVideoRenderer _remoteRenderer = RTCVideoRenderer();
   bool _inCalling = false;
