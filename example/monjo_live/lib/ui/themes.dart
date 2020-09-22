@@ -1,54 +1,47 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
+import 'package:toast/toast.dart';
 
 class Themes {
   Themes._();
-  BuildContext context;
+  static BuildContext context;
 
   static ThemeData defaultTheme = ThemeData(
     backgroundColor: Colors.black87,
   );
 
   static AppBar defaultAppBar = AppBar(
-    title: const Text(
-      '媒体信令平台',
-      style: TextStyle(
-        color: Colors.white,
-      ),
-    ),
-    backgroundColor: Colors.green,
-    brightness: Brightness.light,
-    actions: <Widget>[
-      IconButton(
-        onPressed: () {
-          showAlertDialog(BuildContext context) {
-            Widget okButton = FlatButton(
-              child: Text('知道了'),
-              onPressed: () {
-                /// nothing
-              },
-            );
-
-            AlertDialog alert = AlertDialog(
-              title: Text('媒体信令平台'),
-              content: Text('这个软件是由 John Melody Me创建的'),
-              actions: [
-                okButton,
-              ],
-            );
-
-            showDialog(
-              context: context,
-              builder: (BuildContext context) {
-                return alert;
-              },
-            );
-          }
-        },
-        icon: Icon(
-          Icons.info,
-          color: Colors.white,
+   leading: GestureDetector(
+          onTap: () {
+            return exit(0);
+          },
+          child: Icon(
+            Icons.close,
+          ),
         ),
-      ),
-    ],
+        automaticallyImplyLeading: true,
+        centerTitle: true,
+        title: Text(
+          '媒体信令平台',
+          textAlign: TextAlign.center,
+          style: TextStyle(
+            color: Colors.white,
+          ),
+        ),
+        backgroundColor: Colors.green,
+        brightness: Brightness.light,
+        actions: <Widget>[
+          IconButton(
+            onPressed: () {
+              Toast.show(" 此软件由 John Melody Me 创作", context,
+                  duration: Toast.LENGTH_LONG, gravity: Toast.BOTTOM);
+            },
+            icon: Icon(
+              Icons.info,
+              color: Colors.white,
+            ),
+          ),
+        ],
   );
 }

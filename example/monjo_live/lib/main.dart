@@ -5,7 +5,12 @@ import 'package:flutter_webrtc/webrtc.dart';
 import 'package:monjo_live/ui/themes.dart';
 import 'package:monjo_live/util/logger.dart';
 import 'package:sdp_transform/sdp_transform.dart';
+import 'package:toast/toast.dart';
 import 'core/permission.dart';
+
+/// <summary>
+/// Refer : https://stackoverflow.com/questions/64006635/flutter-unhandled-exception-unable-to-rtcpeerconnectioncreateanswer-error
+/// </summary>
 
 void main() {
   runApp(
@@ -30,7 +35,7 @@ class CallerApp extends StatefulWidget {
 
 class _CallerAppState extends State<CallerApp> {
   /// START: Logic Components ///
-  TextEditingController sdpController = TextEditingController();
+  final TextEditingController sdpController = TextEditingController();
   RTCVideoRenderer _localRenderer = RTCVideoRenderer();
   RTCVideoRenderer _remoteRenderer = RTCVideoRenderer();
   RTCPeerConnection _peerConnection;
@@ -38,7 +43,7 @@ class _CallerAppState extends State<CallerApp> {
   bool _offer = false;
 
   @override
-  void dispose() {
+  dispose() {
     _localRenderer.dispose();
     sdpController.dispose();
     super.dispose();
@@ -46,7 +51,6 @@ class _CallerAppState extends State<CallerApp> {
 
   @override
   void initState() {
-    super.initState();
     requestPermission();
     initRenderers();
     _createPeerConnection().then((pc) {
@@ -54,6 +58,7 @@ class _CallerAppState extends State<CallerApp> {
     });
 
     // _getUserMedia();
+    super.initState();
   }
 
   /// Server Changes Here 服务器在此更改
@@ -77,6 +82,8 @@ class _CallerAppState extends State<CallerApp> {
     RTCPeerConnection pc =
         await createPeerConnection(config, offerSdpConstraints);
 
+    if (pc != null) print('HERE ==> $pc');
+
     pc.addStream(_localStream);
 
     pc.onIceCandidate = (e) {
@@ -93,6 +100,10 @@ class _CallerAppState extends State<CallerApp> {
       }
     };
 
+    pc.onIceConnectionState = (e) {
+      print(e);
+    };
+
     pc.onAddStream = (stream) {
       print('addStream:' + stream.id);
       _remoteRenderer.srcObject = stream;
@@ -103,7 +114,7 @@ class _CallerAppState extends State<CallerApp> {
 
   _getUserMedia() async {
     final Map<String, dynamic> mediaConstraints = {
-      'audio': true,
+      'audio': false,
       'video': {
         'facingMode': 'user',
       },
@@ -112,6 +123,7 @@ class _CallerAppState extends State<CallerApp> {
     MediaStream mediaStream = await navigator.getUserMedia(mediaConstraints);
 
     _localRenderer.srcObject = mediaStream;
+    _localRenderer.mirror = true;
 
     return mediaStream;
   }
@@ -150,6 +162,8 @@ class _CallerAppState extends State<CallerApp> {
 
     print(description.toMap());
 
+    // debugPrint(description.toMap().toString(), wrapWidth: 2048);
+
     await _peerConnection.setRemoteDescription(description);
   }
 
@@ -163,6 +177,15 @@ class _CallerAppState extends State<CallerApp> {
 
     _offer = true;
 
+    // print('__CREATE_OFFER__');
+
+    print(
+      json.encode({
+        'sdp': description.sdp.toString(),
+        'type': description.type.toString(),
+      }),
+    );
+
     _peerConnection.setLocalDescription(description);
   }
 
@@ -170,7 +193,15 @@ class _CallerAppState extends State<CallerApp> {
     RTCSessionDescription description =
         await _peerConnection.createAnswer({'offerToReceiveVideo': 1});
     var session = parse(description.sdp);
-    print(json.encode(session));
+    // print(json.encode(session));
+    debugPrint(json.encode(session), wrapWidth: 2048);
+    // print('__CREATE_ANSWER__');
+    // print(
+    //   json.encode({
+    //     'sdp': description.sdp.toString(),
+    //     'type': description.type.toString(),
+    //   }),
+    // );
 
     _peerConnection.setLocalDescription(description);
   }
@@ -230,10 +261,14 @@ class _CallerAppState extends State<CallerApp> {
     return Padding(
       padding: const EdgeInsets.all(16.0),
       child: TextField(
+        autofocus: true,
         controller: sdpController,
         keyboardType: TextInputType.multiline,
         maxLines: 3,
         maxLength: TextField.noMaxLength,
+        onChanged: (value) {
+          debugPrint("INPUT ==>>>>>>>> $value , ON CHANGES", wrapWidth: 2048);
+        },
       ),
     );
   }
@@ -284,8 +319,42 @@ class _CallerAppState extends State<CallerApp> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: Themes.defaultAppBar,
-      body: Container(
+      appBar: AppBar(
+        leading: GestureDetector(
+          onTap: () {
+            dispose();
+            return exit(0);
+          },
+          child: Icon(
+            Icons.close,
+          ),
+        ),
+        automaticallyImplyLeading: true,
+        centerTitle: true,
+        title: Text(
+          '媒体信令平台',
+          textAlign: TextAlign.center,
+          style: TextStyle(
+            color: Colors.white,
+          ),
+        ),
+        backgroundColor: Colors.green,
+        brightness: Brightness.light,
+        actions: <Widget>[
+          IconButton(
+            onPressed: () {
+              print(' 此软件由 John Melody Me 创作');
+              Toast.show(" 此软件由 John Melody Me 创作", context,
+                  duration: Toast.LENGTH_LONG, gravity: Toast.BOTTOM);
+            },
+            icon: Icon(
+              Icons.info,
+              color: Colors.white,
+            ),
+          ),
+        ],
+      ),
+      body: SingleChildScrollView(
         child: Column(
           children: <Widget>[
             videoRenderers(),
