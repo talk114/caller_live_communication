@@ -261,7 +261,6 @@ class _CallerAppState extends State<CallerApp> {
     return Padding(
       padding: const EdgeInsets.all(16.0),
       child: TextField(
-        autofocus: true,
         controller: sdpController,
         keyboardType: TextInputType.multiline,
         maxLines: 3,
