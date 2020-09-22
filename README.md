@@ -42,5 +42,5 @@ turnserver-cli  5766/tcp                        # Coturn
 Email: [johnmelodyme@yandex.com](mailto:johnmelodyme@yandex.com )
 
 <b>Donate</b>
-![](https://github.com/johnmelodyme/ShortestPathAlgorithm/blob/master/assets/wechat.png=20x20)
+![](https://github.com/johnmelodyme/ShortestPathAlgorithm/blob/master/assets/wechat.png)
 
