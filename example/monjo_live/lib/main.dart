@@ -10,6 +10,11 @@ import 'core/permission.dart';
 
 /// <summary>
 /// Refer : https://stackoverflow.com/questions/64006635/flutter-unhandled-exception-unable-to-rtcpeerconnectioncreateanswer-error
+/// Refer: https://www.reddit.com/r/Coding_for_Teens/comments/iy1iqu/unhandled_exception_unable_to/
+/// Refer: https://devrant.com/rants/3079444/i-encountered-this-exception-in-flutter-unhandled-exception-unable-to-rtcpeercon
+/// Refer: https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/Signaling_and_video_calling
+/// Protocol: https://tools.ietf.org/rfc/rfc5761.txt
+/// Lobby: https://gitter.im/flutter-webrtc/Lobby
 /// </summary>
 
 void main() {
@@ -41,6 +46,7 @@ class _CallerAppState extends State<CallerApp> {
   RTCPeerConnection _peerConnection;
   MediaStream _localStream;
   bool _offer = false;
+  String _output = '';
 
   @override
   dispose() {
@@ -162,7 +168,9 @@ class _CallerAppState extends State<CallerApp> {
 
     print(description.toMap());
 
-    // debugPrint(description.toMap().toString(), wrapWidth: 2048);
+    debugPrint(description.toMap().toString(), wrapWidth: 2048);
+
+    _output = description.toMap().toString();
 
     await _peerConnection.setRemoteDescription(description);
   }
@@ -193,7 +201,7 @@ class _CallerAppState extends State<CallerApp> {
     RTCSessionDescription description =
         await _peerConnection.createAnswer({'offerToReceiveVideo': 1});
     var session = parse(description.sdp);
-    // print(json.encode(session));
+    print(json.encode(session));
     debugPrint(json.encode(session), wrapWidth: 2048);
     // print('__CREATE_ANSWER__');
     // print(
@@ -245,14 +253,20 @@ class _CallerAppState extends State<CallerApp> {
           onPressed: _createOffer,
           child: const Text('举行'),
           color: Colors.amber,
-          padding: EdgeInsets.fromLTRB(50, 10, 50, 10),
         ),
         RaisedButton(
           onPressed: _createAnswer,
           child: const Text('回应'),
           color: Colors.amber,
-          padding: EdgeInsets.fromLTRB(50, 10, 50, 10),
         ),
+      ],
+    );
+  }
+
+  Column output() {
+    return Column(
+      children: [
+        Text(_output.toString()),
       ],
     );
   }
@@ -291,7 +305,6 @@ class _CallerAppState extends State<CallerApp> {
           },
           child: const Text('设置远程描述'),
           color: Colors.amber,
-          padding: EdgeInsets.fromLTRB(50, 10, 50, 10),
         ),
 
         /// set  remote description
@@ -309,7 +322,6 @@ class _CallerAppState extends State<CallerApp> {
           },
           child: const Text('集合候选'),
           color: Colors.amber,
-          padding: EdgeInsets.fromLTRB(50, 10, 50, 10),
         ),
       ],
     );
@@ -360,6 +372,7 @@ class _CallerAppState extends State<CallerApp> {
             sdpCandidateTF(),
             offerAndAnswerButton(),
             sdpCandidateButtons(),
+            output()
           ],
         ),
       ),
