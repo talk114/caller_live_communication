@@ -19,7 +19,8 @@ enum SignalingState {
 typedef void SignalingStateCallback(SignalingState state);
 typedef void StreamStateCallback(MediaStream stream);
 typedef void OtherEventCallback(dynamic event);
-typedef void DataChannelMessageCallback(RTCDataChannel dc, RTCDataChannelMessage data);
+typedef void DataChannelMessageCallback(
+    RTCDataChannel dc, RTCDataChannelMessage data);
 typedef void DataChannelCallback(RTCDataChannel dc);
 
 class CallerSignaling {
@@ -46,15 +47,14 @@ class CallerSignaling {
   DataChannelCallback onDataChannel;
 
   Map<String, dynamic> _iceServers = {
+    // TODO 此 TURN SERVER 须更改应用 COTURN
     'iceServers': [
       {'url': 'stun:stun.l.google.com:19302'},
-
-      ///TODO  turn server configuration example.
-      // {
-      //   'url': 'turn:123.45.67.89:3478',
-      //   'username': 'change_to_real_user',
-      //   'credential': 'change_to_real_secret'
-      // },
+      {
+        'url': 'turn:numb.viagenie.ca',
+        'username': 'muazkh',
+        'credential': 'webrtc@live.com',
+      }
     ]
   };
 
@@ -319,7 +319,7 @@ class CallerSignaling {
       'video': {
         'mandatory': {
           'minWidth':
-              '640', // Provide your own width, height and frame rate here
+              '640', 
           'minHeight': '480',
           'minFrameRate': '30',
         },
