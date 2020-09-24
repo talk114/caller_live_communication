@@ -1,0 +1,8 @@
+{
+    "username":"1600921324:flutter-webrtc",
+    "password":"vaS0akJDURW8Fu9WqwULd/jAP3g",
+    "ttl":86400,
+    "uris":[
+       "turn:47.102.201.4:19302?transport=udp"
+    ]
+}
