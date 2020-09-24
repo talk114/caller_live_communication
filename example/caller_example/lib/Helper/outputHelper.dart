@@ -17,10 +17,20 @@ class PrintHelper {
   }
 
   rprint(String string, int value) {
-    if (interger == 0) {
+    if (value == interger) {
       log('$string');
-    } else if (interger == 1) {
+    } else if (value == 1) {
       log('[RAW_OUTPUT]: \n $string \n  ex: $value');
+    } else {
+      return null;
+    }
+  }
+
+  warning(String string, int value) {
+    if (value == 0) {
+      print('$string');
+    } else if (value == 1) {
+      print('[警告] WARNING:  $string');
     } else {
       return null;
     }
