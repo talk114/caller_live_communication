@@ -51,9 +51,9 @@ class CallerSignaling {
     'iceServers': [
       {'url': 'stun:stun.l.google.com:19302'},
       {
-        'url': 'turn:192.158.29.39:3478?transport=udp',
-        'username': '28224511:1379330808',
-        'credential': 'JZEOEt2V3Qb0y27GRntt2u2PAYA=',
+        'url': 'turn:numb.viagenie.ca',
+        'username': 'muazkh',
+        'credential': 'webrtc@live.com',
       }
     ]
   };
@@ -75,8 +75,8 @@ class CallerSignaling {
 
   final Map<String, dynamic> _dc_constraints = {
     'mandatory': {
-      'OfferToReceiveAudio': true,
-      'OfferToReceiveVideo': true,
+      'OfferToReceiveAudio': false,
+      'OfferToReceiveVideo': false,
     },
     'optional': [],
   };
@@ -141,7 +141,8 @@ class CallerSignaling {
         }
         break;
 
-      case 'offer': {
+      case 'offer':
+        {
           var id = data['from'];
           var description = data['description'];
           var media = data['media'];
@@ -166,7 +167,8 @@ class CallerSignaling {
         }
         break;
 
-      case 'answer': {
+      case 'answer':
+        {
           var id = data['from'];
           var description = data['description'];
 
@@ -178,7 +180,8 @@ class CallerSignaling {
         }
         break;
 
-      case 'candidate': {
+      case 'candidate':
+        {
           var id = data['from'];
           var candidateMap = data['candidate'];
           var pc = _peerConnections[id];
@@ -194,7 +197,8 @@ class CallerSignaling {
         }
         break;
 
-      case 'leave': {
+      case 'leave':
+        {
           var id = data;
           var pc = _peerConnections.remove(id);
           _dataChannels.remove(id);
@@ -264,14 +268,13 @@ class CallerSignaling {
     if (_turnCredential == null) {
       try {
         _turnCredential = await getTurnCredential(_host, _port);
-
-      //  {
-      //       "username": "1584195784:mbzrxpgjys",
-      //       "password": "isyl6FF6nqMTB9/ig5MrMRUXqZg",
-      //       "ttl": 86400,
-      //       "uris": ["turn:127.0.0.1:19302?transport=udp"]
-      //     }
-        
+        /*{
+            "username": "1584195784:mbzrxpgjys",
+            "password": "isyl6FF6nqMTB9/ig5MrMRUXqZg",
+            "ttl": 86400,
+            "uris": ["turn:127.0.0.1:19302?transport=udp"]
+          }
+        */
         _iceServers = {
           'iceServers': [
             {
