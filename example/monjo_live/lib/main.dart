@@ -1,4 +1,5 @@
 import 'dart:convert';
+import 'dart:developer';
 import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:flutter_webrtc/webrtc.dart';
@@ -72,6 +73,11 @@ class _CallerAppState extends State<CallerApp> {
     Map<String, dynamic> config = {
       "iceServers": [
         {"url": "stun:stun.l.google.com:19302"},
+        {
+          'url': 'turn:numb.viagenie.ca',
+          'username': 'muazkh',
+          'credential': 'webrtc@live.com',
+        }
       ],
     };
 
@@ -201,7 +207,7 @@ class _CallerAppState extends State<CallerApp> {
     RTCSessionDescription description =
         await _peerConnection.createAnswer({'offerToReceiveVideo': 1});
     var session = parse(description.sdp);
-    print(json.encode(session));
+    log(json.encode(session));
     debugPrint(json.encode(session), wrapWidth: 2048);
     // print('__CREATE_ANSWER__');
     // print(
@@ -293,16 +299,6 @@ class _CallerAppState extends State<CallerApp> {
         /// set  remote description
         RaisedButton(
           onPressed: _setRemoteDescription,
-          onLongPress: () {
-            var snackBar = SnackBar(
-              content: Text('Set  Remote Description'),
-              action: SnackBarAction(
-                label: 'Undo',
-                onPressed: () {},
-              ),
-            );
-            Scaffold.of(context).showSnackBar(snackBar);
-          },
           child: const Text('设置远程描述'),
           color: Colors.amber,
         ),
@@ -310,16 +306,6 @@ class _CallerAppState extends State<CallerApp> {
         /// set  remote description
         RaisedButton(
           onPressed: _setCandidate,
-          onLongPress: () {
-            var snackBar = SnackBar(
-              content: Text('Set Candicdate'),
-              action: SnackBarAction(
-                label: 'Undo',
-                onPressed: () {},
-              ),
-            );
-            Scaffold.of(context).showSnackBar(snackBar);
-          },
           child: const Text('集合候选'),
           color: Colors.amber,
         ),

@@ -20,6 +20,7 @@ dependencies:
   simple_permissions: ^0.1.9
   sdp_transform: ^0.2.0
   toast: ^0.1.5
+  # flutter_webrtc: ^0.1.7
 
 dev_dependencies:
   flutter_test:
