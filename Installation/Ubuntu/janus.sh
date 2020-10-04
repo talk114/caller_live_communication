@@ -3,9 +3,6 @@
 echo ">>>>>>>BY JOHN MELODY<<<<<<<<<"
 echo ">>> 正在下载 <<< "
 sleep 2
-sudo apt install apache2
-sudo ufw app list
-sudo ufw allow 'Apache'
 # sudo ufw status
 wget https://github.com/coturn/coturn/archive/4.5.1.3.tar.gz
 tar xvfz 4.5.1.3.tar.gz && sudo rm -r 4.5.1.3.tar.gz
