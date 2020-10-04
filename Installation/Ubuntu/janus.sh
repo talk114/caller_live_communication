@@ -70,7 +70,7 @@ sh autogen.sh
 make
 sudo make install
 sudo make configs
-./configure --disable-websockets --disable-data-channels --disable-rabbitmq --disable-mqtt
+./configure --disable-websockets --disable-data-channels --disable-rabbitmq --disable-mqtt --disable-aes-gcm
 cd ..
 cp /janus-gateway /var/
 sudo apt install nginx
